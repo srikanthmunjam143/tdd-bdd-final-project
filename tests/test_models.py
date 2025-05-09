@@ -31,8 +31,8 @@ from service.models import Product, Category, db
 from service import app
 from tests.factories import ProductFactory
 
-DATABASE_URI = os.getenv(
-    "DATABASE_URI", "postgresql://postgres:postgres@localhost:5432/postgres"
+DATABASE_URI = os.getenv("DATABASE_URI", "sqlite:///test.db")
+
 )
 
 
