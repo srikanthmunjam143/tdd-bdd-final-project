@@ -33,7 +33,6 @@ from tests.factories import ProductFactory
 
 DATABASE_URI = os.getenv("DATABASE_URI", "sqlite:///test.db")
 
-)
 
 
 ######################################################################
@@ -101,7 +100,7 @@ class TestProductModel(unittest.TestCase):
         self.assertEqual(new_product.available, product.available)
         self.assertEqual(new_product.category, product.category)
 
-        def test_read_a_product(self):
+    def test_read_a_product(self):
         """It should Read a Product from the database"""
         product = ProductFactory()
         product.create()
